@@ -1,5 +1,5 @@
 import cidadeController from '../controllers/CidadeController'
-import * as KoaRouter from '@koa/router'
+import KoaRouter from '@koa/router'
 
 const cidadeRouter = new KoaRouter()
 const controller = new cidadeController()

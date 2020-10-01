@@ -1,6 +1,6 @@
 import CandidatoController from '../controllers/CandidatoController'
 import CandidatoRepository from "../repositories/CandidatoRepository";
-import * as KoaRouter from '@koa/router'
+import KoaRouter from '@koa/router'
 
 const candidatoRouter = new KoaRouter()
 const controller = new CandidatoController(new CandidatoRepository())

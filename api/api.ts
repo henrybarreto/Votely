@@ -1,4 +1,4 @@
-import * as KoaRouter from '@koa/router'
+import KoaRouter from '@koa/router'
 import candidatoRouter from './candidato.api'
 import cidadeRouter from './cidade.api'
 import votoRouter from './voto.api'

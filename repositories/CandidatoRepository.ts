@@ -2,7 +2,7 @@ import CandidatoModel from '../orm/models/CandidatoModel'
 import CidadeModel from '../orm/models/CidadeModel'
 
 export default class CandidatoRepository {
-  public candidatoModel: typeof CandidatoModel
+  public candidatoModel
   public cidadeModel: typeof CidadeModel
   constructor() {
     this.candidatoModel = CandidatoModel

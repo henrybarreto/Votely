@@ -1,5 +1,5 @@
 import votoController from '../controllers/VotoController'
-import * as KoaRouter from '@koa/router'
+import KoaRouter from '@koa/router'
 
 const votoRouter = new KoaRouter()
 const controller = new votoController()

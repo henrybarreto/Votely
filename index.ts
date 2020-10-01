@@ -1,7 +1,7 @@
-import * as Koa from 'koa';
-import * as logger from 'koa-logger';
-import * as json from 'koa-json';
-import * as bodyparser from 'koa-bodyparser';
+import Koa from 'koa';
+import logger from 'koa-logger';
+import json from 'koa-json';
+import bodyparser from 'koa-bodyparser';
 import router from './api/api'
 
 const app = new Koa();
