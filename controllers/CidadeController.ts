@@ -3,7 +3,7 @@ import IController from './IController'
 
 export default class CidadeController implements IController { 
   public repository: CidadeRepository
-  public path
+  public path: any
 
   constructor() {
     this.path = {
@@ -19,7 +19,7 @@ export default class CidadeController implements IController {
     this.update = this.update.bind(this)
     this.delete = this.delete.bind(this)
   }
-  public async create(context) {
+  public async create(context: any) {
     try {
       const cidadeInfo = context.request.body
       const cidadeNome = cidadeInfo.nome
@@ -30,7 +30,7 @@ export default class CidadeController implements IController {
       console.error(error)
     }
   }
-  public async read(context) {
+  public async read(context: any) {
     try {
       const cidadeInfo = context.request.params
       const cidadeNome = cidadeInfo.cidade
@@ -43,6 +43,6 @@ export default class CidadeController implements IController {
     }
 
   }
-  public async update(context) {}
-  public async delete(context) {}
+  public async update(context: any) {}
+  public async delete(context: any) {}
 }

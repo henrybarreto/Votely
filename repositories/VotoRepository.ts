@@ -9,7 +9,7 @@ export default class votoRepository {
     this.cidadeModel = CidadeModel
   }
   public async create(numero: number, cidade: string) {
-    const candidatoModel = this.candidatoModel.findOne({
+    const candidatoModel: any = await this.candidatoModel.findOne({
       where: {
         numero: numero,
       },
@@ -18,9 +18,9 @@ export default class votoRepository {
         as: 'cidade'
       }]
     })
-    await (await candidatoModel).increment('votos', {})
+    const candidatoVoto: any = await candidatoModel.increment('votos', {})
 
-    return candidatoModel
+    return candidatoVoto
   }
   public async read() {
     

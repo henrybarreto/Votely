@@ -1,6 +1,6 @@
 export default interface IController {
-  create(context): Promise<any>
-  read(context): Promise<any>
-  update(contex): Promise<any>
-  delete(context): Promise<any>
+  create(context: any): Promise<any>
+  read(context: any): Promise<any>
+  update(contex: any): Promise<any>
+  delete(context: any): Promise<any>
 }

@@ -1,9 +1,10 @@
+import { Context } from "koa";
 import CandidatoRepository from "../repositories/CandidatoRepository";
 import IController from './IController'
 
 export default class CandidatoController implements IController {
   public candidatoRepository: CandidatoRepository
-  public path;
+  public path: any;
   constructor(repository: CandidatoRepository) {
     this.path = {
       get: '/candidato/:cidade/:numero',
@@ -18,7 +19,7 @@ export default class CandidatoController implements IController {
     this.update = this.update.bind(this)
     this.delete = this.delete.bind(this)
   }
-  public async create(context) {
+  public async create(context: any) {
     try {
       const candidatoInfo = context.request.body
       const candidatoNumero = candidatoInfo.numero
@@ -31,14 +32,14 @@ export default class CandidatoController implements IController {
       console.error(error)
     }
   }
-  public async read(context) {
+  public async read(context: any) {
     const candidatoInfo = context.request.params
     const candidatoNumero = candidatoInfo.numero
     const candidatoCidade = candidatoInfo.cidade
     const candidato = await this.candidatoRepository.read(candidatoNumero, candidatoCidade)
     context.body = candidato
   }
-  public async update(context) {
+  public async update(context: any) {
     const candidatoInfo = context.request.body
     const candidatoNumero = candidatoInfo.numero
     const candidatoCidade = candidatoInfo.cidade
@@ -46,5 +47,5 @@ export default class CandidatoController implements IController {
     const candidato = await this.candidatoRepository.update(candidatoNumero, candidatoCidade, candidatoAtualiza)
     context.body = candidato
   }
-  public async delete(context) {}
+  public async delete(context: any) {}
 }
