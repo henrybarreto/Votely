@@ -1,6 +1,5 @@
 import * as Sequelize from 'sequelize'
 import sequelizeConnection from '../connection'
-import CandidatoModel from './CandidatoModel';
 
 const CidadeModel = sequelizeConnection.define('cidade', {
   id: {

@@ -1,9 +1,9 @@
 import { Context } from "koa"
 import VotoRepository from "../repositories/VotoRepository"
-import IVotoController from './IVotoController'
+import IController, { IPath } from "./IController"
 
-export default class VotoController implements IVotoController {
-  public path: any
+export default class VotoController implements IController {
+  public path: IPath
   public votoRepository: VotoRepository
   constructor() {
     this.path = {

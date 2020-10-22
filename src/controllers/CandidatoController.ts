@@ -1,10 +1,9 @@
-import { Context } from "koa";
 import CandidatoRepository from "../repositories/CandidatoRepository";
-import IController from './IController'
+import IController, { IPath } from './IController'
 
 export default class CandidatoController implements IController {
   public candidatoRepository: CandidatoRepository
-  public path: any;
+  public path: IPath
   constructor(repository: CandidatoRepository) {
     this.path = {
       get: '/candidato/:cidade/:numero',

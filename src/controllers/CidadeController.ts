@@ -1,18 +1,17 @@
-import CidadeRepository from "../repositories/CidadeRepository";
-import IController from './IController'
+import CidadeRepository from '../repositories/CidadeRepository'
+import IController, { IPath } from './IController'
 
 export default class CidadeController implements IController { 
   public repository: CidadeRepository
-  public path: any
-
-  constructor() {
+  public path: IPath
+  constructor(repostory: CidadeRepository) {
     this.path = {
       get: '/cidade/:cidade',
       post: '/cidade',
       put: '/cidade/:cidade',
       delete: '/cidade/:cidade'
     }
-    this.repository = new CidadeRepository()
+    this.repository = repostory
 
     this.create = this.create.bind(this)
     this.read = this.read.bind(this)
@@ -21,6 +20,7 @@ export default class CidadeController implements IController {
   }
   public async create(context: any) {
     try {
+      console.log(context.state)
       const cidadeInfo = context.request.body
       const cidadeNome = cidadeInfo.nome
       const cidade = await this.repository.create(cidadeNome)
@@ -36,8 +36,8 @@ export default class CidadeController implements IController {
       const cidadeNome = cidadeInfo.cidade
       const cidade = await this.repository.read(cidadeNome)
       console.log(cidade)
+
       context.body = cidade
-      
     } catch (error) { 
       console.error(error)
     }

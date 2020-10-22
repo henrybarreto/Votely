@@ -22,11 +22,6 @@ export default class CandidatoRepository {
     return candidatoModel
   }
   public async read(numero: number, cidade: string) {
-    const cidadeModel = await this.cidadeModel.findOne({
-      where: {
-        nome: cidade
-      }
-    })
     const candidatoModel = await this.candidatoModel.findOne({
       where: {
         numero: numero,
