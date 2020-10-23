@@ -1,6 +1,7 @@
-import CidadeModel from '../orm/models/CidadeModel';
+import CidadeModel from '../../database/sequelize/models/CidadeModel'
+import ICidadeRepository from '../ICidadeRepository'
 
-export default class CidadeRepository {
+export default class CidadeRepository implements ICidadeRepository{
   public cidadeModel: typeof CidadeModel
   constructor() {
     this.cidadeModel = CidadeModel
@@ -19,6 +20,6 @@ export default class CidadeRepository {
     })
     return cidade
   }
-  update(nome: string, ...dadosParaAtualziar: any) {}
-  delete(nome: string) {}
+  async update(nome: string, ...dadosParaAtualziar: any) {}
+  async delete(nome: string) {}
 }

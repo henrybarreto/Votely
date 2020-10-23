@@ -1,13 +1,16 @@
-import CidadeController from '../controllers/CidadeController'
-import CidadeRepository from "../repositories/CidadeRepository";
 import KoaRouter from '@koa/router'
+import CidadeController from '../controllers/CidadeController'
+import CidadeRepository from "../repositories/sequelize/CidadeRepository";
+import IController from '../controllers/IController';
+import ICidadeRepository from '../repositories/ICidadeRepository';
 
-const cidadeRouter = new KoaRouter()
-const controller = new CidadeController(new CidadeRepository())
+const router = new KoaRouter()
+const repository: ICidadeRepository = new CidadeRepository()
+const controller: IController = new CidadeController(repository)
 
-cidadeRouter.post('cidade', controller.path.post, controller.create)
-cidadeRouter.get('cidade', controller.path.get, controller.read)
-cidadeRouter.put('cidade', controller.path.put, controller.update)
-cidadeRouter.delete('cidade', controller.path.delete, controller.delete)
+router.post('cidade', controller.path.post, controller.create)
+router.get('cidade', controller.path.get, controller.read)
+router.put('cidade', controller.path.put, controller.update)
+router.delete('cidade', controller.path.delete, controller.delete)
 
-export default cidadeRouter;
+export default router;

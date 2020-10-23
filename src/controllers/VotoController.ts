@@ -1,27 +1,27 @@
 import { Context } from "koa"
-import VotoRepository from "../repositories/VotoRepository"
-import IController, { IPath } from "./IController"
+import IVotoRepository from "../repositories/IVotoRepository"
+import IVotoController, { IPath } from "./IVotoController"
 
-export default class VotoController implements IController {
+export default class VotoController implements IVotoController {
   public path: IPath
-  public votoRepository: VotoRepository
-  constructor() {
+  public votoRepository: IVotoRepository
+  constructor(repository: IVotoRepository) {
     this.path = {
       get: '/voto/:cidade/:numero',
       post: '/voto',
     }
-    this.votoRepository = new VotoRepository()
+    this.votoRepository = repository
     
-    this.set = this.set.bind(this)
-    this.get = this.get.bind(this)
+    this.create = this.create.bind(this)
+    this.read = this.read.bind(this)
   }
-  public async set(context: Context) {
+  public async create(context: Context) {
     const candidatoNumero = context.request.body.numero
     const candidatoCidade = context.request.body.cidade
     const candidato = await this.votoRepository.create(candidatoNumero, candidatoCidade)
     context.body = candidato
   }
-  async get(context: Context) {
+  public async read(context: Context) {
     const candidato = context.request.body.candidato
     const cidade = context.request.body.cidade
   }

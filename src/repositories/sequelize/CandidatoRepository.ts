@@ -1,7 +1,8 @@
-import CandidatoModel from '../orm/models/CandidatoModel'
-import CidadeModel from '../orm/models/CidadeModel'
+import CandidatoModel from '../../database/sequelize/models/CandidatoModel'
+import CidadeModel from '../../database/sequelize/models/CidadeModel'
+import ICandidatoRepository from '../ICandidatoRepository'
 
-export default class CandidatoRepository {
+export default class CandidatoRepository implements ICandidatoRepository{
   public candidatoModel: any
   public cidadeModel: any
   constructor() {
@@ -41,5 +42,5 @@ export default class CandidatoRepository {
     candidatoModel.save()
     return candidatoModel
   }
-  delete(numero: number) {}
+  // delete(numero: number) {}
 }

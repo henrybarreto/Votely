@@ -1,10 +1,10 @@
-import CidadeRepository from '../repositories/CidadeRepository'
+import ICidadeRepository from '../repositories/ICidadeRepository'
 import IController, { IPath } from './IController'
 
 export default class CidadeController implements IController { 
-  public repository: CidadeRepository
+  public repository: ICidadeRepository
   public path: IPath
-  constructor(repostory: CidadeRepository) {
+  constructor(repostory: ICidadeRepository) {
     this.path = {
       get: '/cidade/:cidade',
       post: '/cidade',

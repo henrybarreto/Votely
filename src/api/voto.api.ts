@@ -1,10 +1,14 @@
-import votoController from '../controllers/VotoController'
 import KoaRouter from '@koa/router'
+import VotoController from '../controllers/VotoController'
+import VotoRepository from '../repositories/sequelize/VotoRepository'
+import IVotoController from '../controllers/IVotoController'
+import IVotoRepository from '../repositories/IVotoRepository'
 
-const votoRouter = new KoaRouter()
-const controller = new votoController()
+const router = new KoaRouter()
+const repository: IVotoRepository = new VotoRepository()
+const controller: IVotoController = new VotoController(repository)
 
-votoRouter.post('voto', controller.path.post, controller.set)
-votoRouter.get('voto', controller.path.get, controller.get)
+router.post('voto', controller.path.post, controller.create)
+router.get('voto', controller.path.get, controller.read)
 
-export default votoRouter;
+export default router;

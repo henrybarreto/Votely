@@ -1,10 +1,10 @@
-import CandidatoRepository from "../repositories/CandidatoRepository";
+import ICandidatoRepository from "../repositories/ICandidatoRepository";
 import IController, { IPath } from './IController'
 
 export default class CandidatoController implements IController {
-  public candidatoRepository: CandidatoRepository
+  public candidatoRepository: ICandidatoRepository
   public path: IPath
-  constructor(repository: CandidatoRepository) {
+  constructor(repository: ICandidatoRepository) {
     this.path = {
       get: '/candidato/:cidade/:numero',
       post: '/candidato',
