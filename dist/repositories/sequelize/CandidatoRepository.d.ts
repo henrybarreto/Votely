@@ -1,4 +1,4 @@
-import ICandidatoRepository from '../ICandidatoRepository';
+import ICandidatoRepository from '../interface/ICandidatoRepository';
 export default class CandidatoRepository implements ICandidatoRepository {
     candidatoModel: any;
     cidadeModel: any;

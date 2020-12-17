@@ -1,5 +1,5 @@
-import ICandidatoRepository from "../repositories/interface/candidato";
-import IController, { IPath } from './controller'
+import ICandidatoRepository from "../repositories/interface/ICandidatoRepository";
+import IController, { IPath } from './Controller'
 
 export default class CandidatoController implements IController {
   public candidatoRepository: ICandidatoRepository

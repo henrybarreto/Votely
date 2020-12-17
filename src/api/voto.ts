@@ -1,8 +1,8 @@
 import KoaRouter from '@koa/router'
-import VotoController from '../controllers/voto'
-import VotoRepository from '../repositories/sequelize/voto'
-import IVotoController from '../controllers/voto'
-import IVotoRepository from '../repositories/interface/voto'
+import VotoController from '../controllers/VotoController'
+import VotoRepository from '../repositories/sequelize/VotoRepository'
+import IVotoController from '../controllers/VotoController'
+import IVotoRepository from '../repositories/interface/IVotoRepository'
 
 const router = new KoaRouter()
 const repository: IVotoRepository = new VotoRepository()

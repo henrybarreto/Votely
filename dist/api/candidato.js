@@ -4,11 +4,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const router_1 = __importDefault(require("@koa/router"));
-const candidato_1 = __importDefault(require("../controllers/candidato"));
-const candidato_2 = __importDefault(require("../repositories/sequelize/candidato"));
+const CandidatoController_1 = __importDefault(require("../controllers/CandidatoController"));
+const CandidatoRepository_1 = __importDefault(require("../repositories/sequelize/CandidatoRepository"));
 const router = new router_1.default();
-const repository = new candidato_2.default();
-const controller = new candidato_1.default(repository);
+const repository = new CandidatoRepository_1.default();
+const controller = new CandidatoController_1.default(repository);
 router.post('candidato', controller.path.post, controller.create);
 router.get('candidato', controller.path.get, controller.read);
 router.put('candidato', controller.path.put, controller.update);

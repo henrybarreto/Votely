@@ -1,5 +1,5 @@
 import { Context } from "koa"
-import IVotoRepository from "../repositories/interface/voto"
+import IVotoRepository from "../repositories/interface/IVotoRepository"
 
 export interface IPath {
   get?: any,

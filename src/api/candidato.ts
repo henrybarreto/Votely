@@ -1,8 +1,8 @@
 import KoaRouter from '@koa/router'
-import CandidatoController from '../controllers/candidato'
-import CandidatoRepository from "../repositories/sequelize/candidato";
-import IController from '../controllers/controller';
-import ICandidatoRepository from '../repositories/interface/candidato';
+import CandidatoController from '../controllers/CandidatoController'
+import CandidatoRepository from "../repositories/sequelize/CandidatoRepository";
+import IController from '../controllers/Controller';
+import ICandidatoRepository from '../repositories/interface/ICandidatoRepository';
 
 const router = new KoaRouter()
 const repository: ICandidatoRepository = new CandidatoRepository()

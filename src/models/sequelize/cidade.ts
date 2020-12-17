@@ -1,5 +1,5 @@
 import * as Sequelize from 'sequelize'
-import sequelizeConnection from '../sequelize/connection'
+import sequelizeConnection from '../../config/db_sequelize_connection'
 
 const CidadeModel = sequelizeConnection.define('cidade', {
   id: {

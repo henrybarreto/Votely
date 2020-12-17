@@ -3,8 +3,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const candidato_1 = __importDefault(require("../../database/models/candidato"));
-const cidade_1 = __importDefault(require("../../database/models/cidade"));
+const candidato_1 = __importDefault(require("../../models/sequelize/candidato"));
+const cidade_1 = __importDefault(require("../../models/sequelize/cidade"));
 class CandidatoRepository {
     constructor() {
         this.candidatoModel = candidato_1.default;

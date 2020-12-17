@@ -1,6 +1,6 @@
-import CandidatoModel from '../../database/models/candidato'
-import CidadeModel from '../../database/models/cidade'
-import ICandidatoRepository from '../interface/candidato'
+import CandidatoModel from '../../models/sequelize/candidato'
+import CidadeModel from '../../models/sequelize/cidade'
+import ICandidatoRepository from '../interface/ICandidatoRepository'
 
 export default class CandidatoRepository implements ICandidatoRepository{
   public candidatoModel: any

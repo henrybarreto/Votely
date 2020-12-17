@@ -1,8 +1,8 @@
 import KoaRouter from '@koa/router'
-import CidadeController from '../controllers/cidade'
-import CidadeRepository from "../repositories/sequelize/cidade";
-import IController from '../controllers/controller';
-import ICidadeRepository from '../repositories/interface/cidade';
+import CidadeController from '../controllers/CidadeController'
+import CidadeRepository from "../repositories/sequelize/CidadeRepository";
+import IController from '../controllers/Controller';
+import ICidadeRepository from '../repositories/interface/ICidadeRepository';
 
 const router = new KoaRouter()
 const repository: ICidadeRepository = new CidadeRepository()

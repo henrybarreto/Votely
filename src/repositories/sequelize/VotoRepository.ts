@@ -1,6 +1,6 @@
-import CandidatoModel from '../../database/models/candidato'
-import CidadeModel from '../../database/models/cidade'
-import IVotoRepository from '../interface/voto'
+import CandidatoModel from '../../models/sequelize/candidato'
+import CidadeModel from '../../models/sequelize/cidade'
+import IVotoRepository from '../interface/IVotoRepository'
 
 export default class VotoRepository implements IVotoRepository{
   public candidatoModel: typeof CandidatoModel

@@ -1,5 +1,5 @@
-import ICidadeRepository from '../repositories/interface/cidade'
-import IController, { IPath } from './controller'
+import ICidadeRepository from '../repositories/interface/ICidadeRepository'
+import IController, { IPath } from './Controller'
 
 export default class CidadeController implements IController { 
   public repository: ICidadeRepository

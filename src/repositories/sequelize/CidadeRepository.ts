@@ -1,5 +1,5 @@
-import CidadeModel from '../../database/models/cidade'
-import ICidadeRepository from '../interface/cidade'
+import CidadeModel from '../../models/sequelize/cidade'
+import ICidadeRepository from '../interface/ICidadeRepository'
 
 export default class CidadeRepository implements ICidadeRepository{
   public cidadeModel: typeof CidadeModel
