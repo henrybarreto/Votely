@@ -1,27 +1,15 @@
-import { Context } from "koa"
-import IVotoRepository from "../repositories/interface/IVotoRepository"
-
-export interface IPath {
-  get?: any,
-  post?: any,
-  put?: any,
-  delete?: any,
-}
+import { Context } from 'koa'
+import IVotoRepository from '../repositories/interface/IVotoRepository'
 
 export default interface IVotoController {
-  path: IPath
   create(context: Context): Promise<any>
   read(context: Context): Promise<any>
 } 
 
 export default class VotoController implements IVotoController {
-  public path: IPath
+  //public path: IPath
   public votoRepository: IVotoRepository
   constructor(repository: IVotoRepository) {
-    this.path = {
-      get: '/voto/:cidade/:numero',
-      post: '/voto',
-    }
     this.votoRepository = repository
     
     this.create = this.create.bind(this)

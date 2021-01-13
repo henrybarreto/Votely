@@ -1,13 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class CandidatoController {
+    //public path: IPath
     constructor(repository) {
-        this.path = {
-            get: '/candidato/:cidade/:numero',
-            post: '/candidato',
-            put: '/candidato',
-            delete: '/candidato/:candidato'
-        };
+        /*this.path = {
+          get: '/candidato/:cidade/:numero',
+          post: '/candidato',
+          put: '/candidato',
+          delete: '/candidato/:candidato'
+        }*/
         this.candidatoRepository = repository;
         this.create = this.create.bind(this);
         this.read = this.read.bind(this);

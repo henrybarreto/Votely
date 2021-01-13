@@ -1,4 +1,4 @@
-import { Context } from "koa";
+import { Context } from 'koa';
 export interface IPath {
     get?: any;
     post?: any;
@@ -6,7 +6,6 @@ export interface IPath {
     delete?: any;
 }
 export default interface IController {
-    path: IPath;
     create(context: Context): Promise<any>;
     read(context: Context): Promise<any>;
     update(context: Context): Promise<any>;

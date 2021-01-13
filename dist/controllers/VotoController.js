@@ -2,10 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 class VotoController {
     constructor(repository) {
-        this.path = {
-            get: '/voto/:cidade/:numero',
-            post: '/voto',
-        };
         this.votoRepository = repository;
         this.create = this.create.bind(this);
         this.read = this.read.bind(this);

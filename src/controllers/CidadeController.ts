@@ -3,14 +3,14 @@ import IController, { IPath } from './Controller'
 
 export default class CidadeController implements IController { 
   public repository: ICidadeRepository
-  public path: IPath
+  //public path: IPath
   constructor(repostory: ICidadeRepository) {
-    this.path = {
+    /*this.path = {
       get: '/cidade/:cidade',
       post: '/cidade',
       put: '/cidade/:cidade',
       delete: '/cidade/:cidade'
-    }
+    }*/
     this.repository = repostory
 
     this.create = this.create.bind(this)

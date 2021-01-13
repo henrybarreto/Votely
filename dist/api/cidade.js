@@ -8,9 +8,15 @@ const CidadeController_1 = __importDefault(require("../controllers/CidadeControl
 const CidadeRepository_1 = __importDefault(require("../repositories/sequelize/CidadeRepository"));
 const router = new router_1.default();
 const repository = new CidadeRepository_1.default();
+const path = {
+    get: '/cidade/:cidade',
+    post: '/cidade',
+    put: '/cidade/:cidade',
+    delete: '/cidade/:cidade'
+};
 const controller = new CidadeController_1.default(repository);
-router.post('cidade', controller.path.post, controller.create);
-router.get('cidade', controller.path.get, controller.read);
-router.put('cidade', controller.path.put, controller.update);
-router.delete('cidade', controller.path.delete, controller.delete);
+router.post('cidade', path.post, controller.create);
+router.get('cidade', path.get, controller.read);
+router.put('cidade', path.put, controller.update);
+router.delete('cidade', path.delete, controller.delete);
 exports.default = router;

@@ -1,4 +1,4 @@
-import { Context } from "koa";
+import { Context } from 'koa';
 
 export interface IPath {
   get?: any,
@@ -8,7 +8,7 @@ export interface IPath {
 }
 
 export default interface IController {
-  path: IPath
+  //path: IPath
   create(context: Context): Promise<any>
   read(context: Context): Promise<any>
   update(context: Context): Promise<any>

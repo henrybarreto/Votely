@@ -8,7 +8,11 @@ const VotoController_1 = __importDefault(require("../controllers/VotoController"
 const VotoRepository_1 = __importDefault(require("../repositories/sequelize/VotoRepository"));
 const router = new router_1.default();
 const repository = new VotoRepository_1.default();
+const path = {
+    get: '/voto/:cidade/:numero',
+    post: '/voto',
+};
 const controller = new VotoController_1.default(repository);
-router.post('voto', controller.path.post, controller.create);
-router.get('voto', controller.path.get, controller.read);
+router.post('voto', path.post, controller.create);
+router.get('voto', path.get, controller.read);
 exports.default = router;

@@ -1,13 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class CidadeController {
+    //public path: IPath
     constructor(repostory) {
-        this.path = {
-            get: '/cidade/:cidade',
-            post: '/cidade',
-            put: '/cidade/:cidade',
-            delete: '/cidade/:cidade'
-        };
+        /*this.path = {
+          get: '/cidade/:cidade',
+          post: '/cidade',
+          put: '/cidade/:cidade',
+          delete: '/cidade/:cidade'
+        }*/
         this.repository = repostory;
         this.create = this.create.bind(this);
         this.read = this.read.bind(this);

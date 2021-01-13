@@ -8,9 +8,15 @@ const CandidatoController_1 = __importDefault(require("../controllers/CandidatoC
 const CandidatoRepository_1 = __importDefault(require("../repositories/sequelize/CandidatoRepository"));
 const router = new router_1.default();
 const repository = new CandidatoRepository_1.default();
+const path = {
+    get: '/candidato/:cidade/:numero',
+    post: '/candidato',
+    put: '/candidato',
+    delete: '/candidato/:candidato'
+};
 const controller = new CandidatoController_1.default(repository);
-router.post('candidato', controller.path.post, controller.create);
-router.get('candidato', controller.path.get, controller.read);
-router.put('candidato', controller.path.put, controller.update);
-router.delete('candidato', controller.path.delete, controller.delete);
+router.post('candidato', path.post, controller.create);
+router.get('candidato', path.get, controller.read);
+router.put('candidato', path.put, controller.update);
+router.delete('candidato', path.delete, controller.delete);
 exports.default = router;
