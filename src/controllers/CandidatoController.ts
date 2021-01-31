@@ -3,14 +3,7 @@ import IController, { IPath } from './Controller'
 
 export default class CandidatoController implements IController {
   public candidatoRepository: ICandidatoRepository
-  //public path: IPath
   constructor(repository: ICandidatoRepository) {
-    /*this.path = {
-      get: '/candidato/:cidade/:numero',
-      post: '/candidato',
-      put: '/candidato',
-      delete: '/candidato/:candidato'
-    }*/
     this.candidatoRepository = repository
 
     this.create = this.create.bind(this)

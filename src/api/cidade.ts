@@ -1,6 +1,6 @@
 import KoaRouter from '@koa/router'
 import CidadeController from '../controllers/CidadeController'
-import CidadeRepository from "../repositories/sequelize/CidadeRepository";
+import CidadeRepository from "../repositories/CidadeRepository";
 import IController, { IPath } from '../controllers/Controller';
 import ICidadeRepository from '../repositories/interface/ICidadeRepository';
 

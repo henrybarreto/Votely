@@ -1,6 +1,6 @@
 import KoaRouter from '@koa/router'
 import VotoController from '../controllers/VotoController'
-import VotoRepository from '../repositories/sequelize/VotoRepository'
+import VotoRepository from '../repositories/VotoRepository'
 import IVotoController from '../controllers/VotoController'
 import IVotoRepository from '../repositories/interface/IVotoRepository'
 import { IPath } from '../controllers/Controller'

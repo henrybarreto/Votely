@@ -1,6 +1,6 @@
 import KoaRouter from '@koa/router'
 import CandidatoController from '../controllers/CandidatoController'
-import CandidatoRepository from "../repositories/sequelize/CandidatoRepository";
+import CandidatoRepository from "../repositories/CandidatoRepository";
 import IController, { IPath } from '../controllers/Controller';
 import ICandidatoRepository from '../repositories/interface/ICandidatoRepository';
 

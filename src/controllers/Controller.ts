@@ -8,7 +8,6 @@ export interface IPath {
 }
 
 export default interface IController {
-  //path: IPath
   create(context: Context): Promise<any>
   read(context: Context): Promise<any>
   update(context: Context): Promise<any>
