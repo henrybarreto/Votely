@@ -1,13 +1,13 @@
-import {Connection, createConnection} from "typeorm";
-import Candidato from "../entity/Candidato";
-import Cidade from "../entity/Cidade";
-import CidadeRepository from '../repositories/CidadeRepository'
-import CandidatoRepository from '../repositories/CandidatoRepository'
+import {Connection, createConnection} from 'typeorm';
+import Candidato from '../src/entity/Candidato';
+import Cidade from '../src/entity/Cidade';
+import CidadeRepository from '../src/repositories/CidadeRepository'
+import CandidatoRepository from '../src/repositories/CandidatoRepository'
 
 import dotconfig from 'dotenv'
 dotconfig.config()
 
-test('Testing TypeORM connection dev and prod', async () => {
+test('Testing TypeORM connection dev or prod', async () => {
   expect(await createConnection(process.env.ENV))
   .toBeInstanceOf(Connection)
 })

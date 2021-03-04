@@ -7,6 +7,7 @@
       "target": "es5",
       "module": "commonjs",
       "moduleResolution": "node",
+      "rootDirs": ["./", "./src"],
       "outDir": "./dist",
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
@@ -15,7 +16,8 @@
       "skipLibCheck": true
    },
    "include": [
-    "src/*"
+    "src/**/*",
+    "test/**/*"
   ],
    "exclude": [
       "node_modules",
