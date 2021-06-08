@@ -5,11 +5,6 @@ export default class CidadeController implements IController {
   public repository: ICidadeRepository
   constructor(repostory: ICidadeRepository) {
     this.repository = repostory
-
-    this.create = this.create.bind(this)
-    this.read = this.read.bind(this)
-    this.update = this.update.bind(this)
-    this.delete = this.delete.bind(this)
   }
   public async create(context: any) {
     try {

@@ -5,11 +5,6 @@ export default class CandidatoController implements IController {
   public candidatoRepository: ICandidatoRepository
   constructor(repository: ICandidatoRepository) {
     this.candidatoRepository = repository
-
-    this.create = this.create.bind(this)
-    this.read = this.read.bind(this)
-    this.update = this.update.bind(this)
-    this.delete = this.delete.bind(this)
   }
   public async create(context: any) {
     try {

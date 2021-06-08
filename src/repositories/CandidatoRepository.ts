@@ -13,7 +13,7 @@ export default class CandidatoRepository implements ICandidatoRepository{
       candidato.numero = numero
       candidato.nome = nome
       candidato.cidade = await manager.findOne(Cidade, {where: {nome: cidade}})
-      manager.save(candidato)
+      await manager.save(candidato)
       console.log(candidato)
       return candidato
     } catch(error) {

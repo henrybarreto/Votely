@@ -14,7 +14,6 @@ const path: IPath = {
 }
 const controller: IController = new CandidatoController(repository)
 
-
 router.post('candidato', path.post, controller.create)
 router.get('candidato', path.get, controller.read)
 router.put('candidato', path.put, controller.update)

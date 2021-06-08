@@ -16,11 +16,11 @@ app.use(bodyparser());
 app.use(router.routes());
 
 app.listen(process.env.PORT || 3000, async () => {
-  try {
-    console.log('Server started')
-    await dbInit()
-    console.log('TypeORM connection has done!')
-  } catch(error) {
-    console.error(error)
-  }
+    try {
+        console.log('Server started')
+        await dbInit()
+        console.log('TypeORM connection has done!')
+    } catch(error) {
+        console.error(error)
+    }
 })
