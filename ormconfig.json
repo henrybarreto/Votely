@@ -34,17 +34,17 @@
    "synchronize": true,
    "logging": false,
    "entities": [
-      "dist/entity/**/*.js"
+      "build/entity/**/*.js"
    ],
    "migrations": [
-      "dist/migration/**/*.js"
+      "build/migration/**/*.js"
    ],
    "subscribers": [
-      "dist/subscriber/**/*.js"
+      "build/subscriber/**/*.js"
    ],
    "cli": {
-      "entitiesDir": "dist/entity",
-      "migrationsDir": "dist/migration",
-      "subscribersDir": "dist/subscriber"
+      "entitiesDir": "build/entity",
+      "migrationsDir": "build/migration",
+      "subscribersDir": "build/subscriber"
    }
 }]

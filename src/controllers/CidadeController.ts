@@ -31,6 +31,10 @@ export default class CidadeController implements IController {
     }
 
   }
-  public async update(context: any) {}
-  public async delete(context: any) {}
+  public async update(context: any) {
+    //TODO
+  }
+  public async delete(context: any) {
+    //TODO
+  }
 }

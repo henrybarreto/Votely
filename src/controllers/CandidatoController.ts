@@ -34,5 +34,7 @@ export default class CandidatoController implements IController {
     const candidato = await this.candidatoRepository.update(candidatoNumero, candidatoCidade, candidatoAtualiza)
     context.body = candidato
   }
-  public async delete(context: any) {}
+  public async delete(context: any) {
+    //TODO
+  }
 }

@@ -28,6 +28,10 @@ export default class CidadeRepository implements ICidadeRepository{
       console.error(error)
     }
   }
-  async update(nome: string, ...dadosParaAtualziar: any) {}
-  async delete(nome: string) {}
+  async update(nome: string, ...dadosParaAtualziar: any) {
+    //TODO
+  }
+  async delete(nome: string) {
+    //TODO
+  }
 }

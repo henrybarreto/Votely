@@ -1,3 +1,4 @@
+//@ts-ignore
 import { BaseEntity, Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm'
 import Cidade from './Cidade'
 

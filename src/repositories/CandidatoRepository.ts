@@ -42,6 +42,9 @@ export default class CandidatoRepository implements ICandidatoRepository{
 
   }
   public async update(numero: number, cidade: string, dadosParaAtualziar: any) {
+    //TODO
   }
-  public async delete(numero: number) {}
+  public async delete(numero: number) {
+    //TODO
+  }
 }
